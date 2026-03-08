@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;800&display=swap" rel="stylesheet">
+  <title>Sổ tay phòng ngừa bạo lực , lừa đảo dụ dỗ trẻ em<object data="" type=""></object></title>
+</head>
+
+<body>
+  <div id="rotate-warning">
+    Vui lòng xoay ngang màn hình để sử dụng trang web
+</div>
+
+  <div class="flipbook">
+    <div><img src="pic1.png"></div>
+    <div>
+      <img src="pic3.png">
+    </div>
+    <div>
+      <img src="pic4.png">
+    </div>
+    <div>
+      <img src="pic5.png">
+      
+    </div>
+    <div>
+      <img src="pic6.png">
+    </div>
+    <div>
+      <img src="pic7.png">
+    </div>
+    <div>
+      <img src="pic8.webp">
+    </div>
+    <div>
+      <img src="pic9.png">
+    </div>
+    <div>
+      <img src="pic10.webp">
+    </div>
+    <div><img src="pic11.png"></div>
+    <div><img src="pic12.jpg"></div>
+    <div><img src="pic13.png"></div>
+    <div><img src="pic14.jpg"></div>
+    <div>THANKS FOR READING</div>
+  </div>
+  
+
+  <script src="jquery.js"></script>
+  <script src="turn.js"></script>
+  <script>
+    $(".flipbook").turn();
+    function createSnow(){
+    const snow = document.createElement("div");
+    snow.classList.add("snowflake");
+    snow.innerHTML = "❄";
+
+    snow.style.left = Math.random() * window.innerWidth + "px";
+    snow.style.animationDuration = (Math.random()*3 + 2) + "s";
+    snow.style.fontSize = (Math.random()*10 + 10) + "px";
+
+    document.body.appendChild(snow);
+
+    setTimeout(()=>{
+        snow.remove();
+    },5000);
+}
+
+setInterval(createSnow,100);
+  </script>
+</body>
+
+</html>
